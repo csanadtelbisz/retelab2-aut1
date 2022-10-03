@@ -21,7 +21,7 @@ import java.util.Map;
 @Component
 public class EmailService {
 
-	private final String EMAIL_FROM = "hello.springles@outlook.com";
+	private final String EMAIL_FROM = "<sender email address>";
 
 	@Autowired
 	private JavaMailSender emailSender;

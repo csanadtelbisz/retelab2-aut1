@@ -44,11 +44,6 @@ public class AdController {
 		return ads;
 	}
 
-	@GetMapping("a")
-	public List<Ad> getAll2() {
-		return adRepository.findAll();
-	}
-
 	@GetMapping("price")
 	public List<Ad> getAdsByPriceRange(
 			@RequestParam(required = false, defaultValue = "0") int min,
@@ -90,7 +85,6 @@ public class AdController {
 			parameters.put("adTags", finalSavedAd.getTags() == null ? "-" : String.join(", ", finalSavedAd.getTags()));
 			emailService.sendMessageUsingThymeleafTemplate(subscription.getEmail(), "Ad details changed", parameters);
 		});
-
 
 		return ResponseEntity.ok(savedAd);
 	}
