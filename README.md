@@ -115,7 +115,7 @@ státusz!
 amelyek utalnak a cikk jellegére, pl. "bútor", és egy cikknek tetszőleges számú ilyen címke
 megadható. Először egészítsük ki az `Ad` osztályt a megfelelő tagváltozóval, és alkalmazzuk rajta
 a megfelelő annotációt.
-- Vezessünk be egy `GET /api/ads/{tag}` endpointot, ahol `{tag}` helyére a megfelelő címkét lehet
+- Vezessünk be egy `GET /api/subscriptions/{tag}` endpointot, ahol `{tag}` helyére a megfelelő címkét lehet
 írni, és csak azokat a cikkeket listázza, amelyek rendelkeznek a taggel. (Az útvonalból a tag értékét
 a metódus paraméterként kapja meg, ezt `@PathVariable` annotációval kell ellátni.)
 - Teszteld Postmannel a funkciót!
@@ -136,7 +136,7 @@ Az `Application` osztályra tegxük rá az `@EnableScheduling` annotációt.
 
 Egészítsd ki a feladatot feliratkozási és értesítési funkcióval!
 
-- Egy meglévő hirdetéshez tetszőleges felhasználó feliratkozhat a `POST /api/ads/{id}/subscribe`
+- Egy meglévő hirdetéshez tetszőleges felhasználó feliratkozhat a `POST /api/subscriptions/{id}/subscribe`
 hívással. A törzsben olyan adatstruktúrát alakíts ki, hogy a felhasználó megadhassa nevét és email-címét!
 A feliratkozásokat az adatbázisban tárold el! (1 pont)
 - Amikor a feladó módosította a hirdetést, akkor az összes feliratkozónak küldj egyszerű szöveges

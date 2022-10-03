@@ -15,7 +15,7 @@ public class ScheduledTasks {
 	@Autowired
 	private AdRepository adRepository;
 
-	@Scheduled(fixedDelay = 6000)
+	@Scheduled(fixedDelay = 60000)
 	public void deleteExpiredAds() {
 		List<Ad> ads = adRepository.findAll();
 		ads.stream()

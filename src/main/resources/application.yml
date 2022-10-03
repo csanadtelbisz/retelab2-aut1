@@ -5,6 +5,21 @@ spring:
         show_sql: true
         format_sql: true
 
+  mail:
+    host: <host>
+    port: <port>
+    username: <user>
+    password: <password>
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    templates:
+      path: template
+
 logging:
   level:
     org:

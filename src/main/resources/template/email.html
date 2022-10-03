@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p>Dear <span th:text="${recipient}"></span></p>
+<p>Details of <i>Ad#<a th:text="${adId}"></a></i> has changed.</p>
+<p>
+    <b>Title:</b> <i th:text="${adTitle}"></i><br>
+    <b>Description:</b> <a th:text="${adDescription}"></a><br>
+    <b>Tags:</b> <code th:text="${adTags}"></code>
+</p>
+<p>
+    Best regards,<br>
+    <em>Ad Service</em>
+</p>
+<small>This is a HTML message.</small>
+</body>
+</html>
